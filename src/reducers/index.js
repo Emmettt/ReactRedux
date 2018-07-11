@@ -6,7 +6,7 @@ const initialState = {
   searchQuery: ''
 };
 
-export default function inputEvent(state = initialState, action) {
+export default function rootReducer(state = initialState, action) {
   switch (action.type) {
     case 'INPUT_EVENT':
       return { ...state, searchQuery: action.payload };

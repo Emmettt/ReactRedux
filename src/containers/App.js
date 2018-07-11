@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import SearchBar from './SearchBar';
 import ContactList from './ContactList';
-import ContactTab from './ContactTab';
+import ContactTab from '../components/ContactTab';
 import inputAction from '../actions/inputAction';
 import contactClick from '../actions/contactClick';
 
@@ -22,7 +22,12 @@ class App extends Component {
             />
           </div>
         </section>
-        <ContactTab items={this.props.clients} contact={this.props.contactID} />
+        <section className="sectionInfo">
+          <ContactTab
+            items={this.props.clients}
+            contact={this.props.contactID}
+          />
+        </section>
       </div>
     );
   }

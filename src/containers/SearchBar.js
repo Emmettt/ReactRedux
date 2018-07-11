@@ -6,7 +6,6 @@ class SearchBar extends Component {
   };
 
   render() {
-    console.log(this.props.fn);
     return <input className="input" type="text" onChange={this.onInput} />;
   }
 }

@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 
 class ContactTab extends Component {
   render() {
-    console.log('ContactTab, this.props.items :', this.props.items);
     let contact = this.props.items.find(
       el => el.contact.email === this.props.contact
     );
-    console.log(contact);
+
     if (!contact) return <div />;
     const { firstName, lastName, avatar } = contact.general;
     const { title, company } = contact.job;
@@ -14,7 +13,7 @@ class ContactTab extends Component {
     const { email, phone } = contact.contact;
 
     return (
-      <section className="sectionInfo">
+      <div>
         <img
           className="avatarFullSize"
           src={avatar}
@@ -27,13 +26,17 @@ class ContactTab extends Component {
           <p className="job">{title}</p>
           <p className="job">{company}</p>
         </div>
-        <p className="adress">{street}</p>
-        <p className="adress">{city}</p>
-        <p className="adress">{zipCode}</p>
-        <p className="adress">{country}</p>
-        <p className="contacts">e-mail: {email}</p>
-        <p className="contacts">phone: {phone}</p>
-      </section>
+        <div class="adressWrapper">
+          <p className="adress">{street}</p>
+          <p className="adress">{city}</p>
+          <p className="adress">{zipCode}</p>
+          <p className="adress">{country}</p>
+        </div>
+        <div class="contactWrapper">
+          <p className="contacts">e-mail: {email}</p>
+          <p className="contacts">phone: {phone}</p>
+        </div>
+      </div>
     );
   }
 }
