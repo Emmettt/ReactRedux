@@ -11,6 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1 id="heading">React + Redux</h1>
         <section className="sectionList">
           <SearchBar inputHandler={this.props.inputAction} />
           <div class="contactListWrapper">

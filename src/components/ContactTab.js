@@ -6,7 +6,7 @@ class ContactTab extends Component {
       el => el.contact.email === this.props.contact
     );
 
-    if (!contact) return <div />;
+    if (!contact) return <p>Choose contact</p>;
     const { firstName, lastName, avatar } = contact.general;
     const { title, company } = contact.job;
     const { street, city, zipCode, country } = contact.address;

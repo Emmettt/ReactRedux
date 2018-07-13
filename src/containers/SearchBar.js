@@ -6,7 +6,14 @@ class SearchBar extends Component {
   };
 
   render() {
-    return <input className="input" type="text" onChange={this.onInput} />;
+    return (
+      <input
+        className="input"
+        placeholder="Search..."
+        type="text"
+        onChange={this.onInput}
+      />
+    );
   }
 }
 

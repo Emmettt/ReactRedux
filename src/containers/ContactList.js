@@ -7,6 +7,7 @@ class ContactList extends Component {
       Object.getOwnPropertyNames(el1).find(el2 =>
         Object.getOwnPropertyNames(el1[el2]).find(el3 => {
           return (
+            el3 !== 'avatar' &&
             el1[el2][el3]
               .toLowerCase()
               .indexOf(this.props.query.toLowerCase()) !== -1
